@@ -17,6 +17,18 @@ public class Link_Implement {
         }
     }
 
+    public void deletefirst(){
+        if(isempty()) System.out.println("Not Possible! List is empty");
+        else{
+            Node tmp1 = head;
+            Node tmp2 = null;
+            while(tmp1.next!=null){
+                tmp2 = tmp1;
+                tmp1 = tmp1.next;
+            }
+            tmp2.next = null;
+        }
+    }
 
     private boolean isempty() {
         return head==null;
